@@ -921,7 +921,7 @@ static int __alloc_ocmem(struct venus_hfi_device *device)
 	unsigned long size;
 
 	if (!device || !device->res) {
-		dprintk(VIDC_ERR, "%s Invalid param, device: 0x%p\n",
+		dprintk(VIDC_ERR, "%s Invalid param, device: 0x%pK\n",
 				__func__, device);
 		return -EINVAL;
 	}
@@ -956,7 +956,7 @@ static int __free_ocmem(struct venus_hfi_device *device)
 	int rc = 0;
 
 	if (!device || !device->res) {
-		dprintk(VIDC_ERR, "%s Invalid param, device: 0x%p\n",
+		dprintk(VIDC_ERR, "%s Invalid param, device: 0x%pK\n",
 				__func__, device);
 		return -EINVAL;
 	}
@@ -2150,7 +2150,7 @@ static void venus_hfi_core_clear_interrupt(struct venus_hfi_device *device)
 	int rc = 0;
 
 	if (!device) {
-		dprintk(VIDC_ERR, "%s Invalid paramter: %p\n",
+		dprintk(VIDC_ERR, "%s Invalid paramter: %pK\n",
 			__func__, device);
 		return;
 	}
